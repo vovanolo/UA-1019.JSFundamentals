@@ -331,3 +331,113 @@
 
 
 
+// filter
+
+// let numbers = [1,2,3,4,6,7,7,7,8,8,9,10,11];
+
+// let filteredNumbers = numbers.filter(function(element, index){
+//     return element !== 7;
+// })
+
+// console.log(filteredNumbers);
+
+// let numbers = [1,2,3,4,6,7,7,7,8,8,9,10,11];
+
+// let sum = 0;
+
+// for(let i = 0; i < numbers.length; i++){
+//     sum += numbers[i];
+// }
+
+// console.log(sum);
+
+// let sum = numbers.reduce(function(sum, element,index){
+//     return index % 2 === 0 ? sum + element : sum;
+// }, 0)
+
+// console.log(sum);
+
+
+// Помилки
+
+
+// синтаксичні
+
+// console.log(;
+
+// Рантайм помилки(Референс помилки)
+
+// goodbye();
+// setTimeout(() =>{
+// console.log(a);
+// },2000);
+// let a = "hello";
+
+// Логічні
+
+// console.log(2 + 1);
+
+
+// Лайфхак
+
+// let x  =  2 + 2;
+// console.log(x);
+// let z = x +1;
+// console.log(z);
+
+
+//  try catch
+
+// try{
+//     console.log("im inside try section");
+//     goodbye();
+//     console.log("im after error");
+// }catch(error){
+//     console.log("im inside catch section");
+// }
+
+// try{
+//     // let numbers = [1,2,3,4,6,7,7,7,8,8,9,10,11];
+//     console.log("im inside try section");
+//     goodbye();
+//     bye();
+//     console.log("im after error");
+// }catch(error){
+//     console.log(error.name);
+//     console.log(error.message);
+//     console.log(error.stack);
+
+// }
+
+// console.log(numbers);
+
+// new Error("Wrong data");
+// throw new Error("Wrong data");
+class NumberError extends Error{
+    constructor(message){
+        super(message);
+        this.name = "NumberError";
+        this.message = message;
+    }
+}
+
+
+
+
+
+
+function fun(){
+    let number = prompt("Enter a number");
+    if(number > 40){
+        throw new NumberError("Number is > 40");
+    }
+}
+
+try{
+    fun();
+
+}catch(error){
+    console.log(error.name);
+}finally{
+    console.log("thats all")
+}
