@@ -413,31 +413,216 @@
 
 // new Error("Wrong data");
 // throw new Error("Wrong data");
-class NumberError extends Error{
-    constructor(message){
-        super(message);
-        this.name = "NumberError";
-        this.message = message;
+// class NumberError extends Error{
+//     constructor(message){
+//         super(message);
+//         this.name = "NumberError";
+//         this.message = message;
+//     }
+// }
+
+
+
+
+
+
+// function fun(){
+//     let number = prompt("Enter a number");
+//     if(number > 40){
+//         throw new NumberError("Number is > 40");
+//     }
+// }
+
+// try{
+//     fun();
+
+// }catch(error){
+//     console.log(error.name);
+// }finally{
+//     console.log("thats all")
+// }
+
+
+// Класи && Обєкти
+
+
+// 
+// const user = {
+//     key: value
+// }
+
+
+// const user = {
+//     name: "Volodymyr",
+//     age: 200,
+//     friends: ["Vova", "Ivan", "Petro"],
+//     wife: {
+//         secondName: "Vira",
+//         age:200,
+//     }
+// }
+
+
+// console.log(user);
+// console.log(user.friends[2]);
+
+// let keyName = "friends";
+// let keyName = "friends";
+
+// console.log(user[keyName]);
+
+// console.log(user.keyName);
+
+// user.name = "Ivan";
+// user.city = "Lviv";
+// user.friends.push("Pavlo")
+
+// console.log(user.wife.name);
+
+
+// const user = {
+//     name: "Volodymyr",
+//     age: 200,
+//     friends: ["Vova", "Ivan", "Petro"],
+//     wife: {
+//         secondName: "Vira",
+//         age:200,
+//     },
+//     showName(){
+//         console.log(this.name);
+//     }
+// }
+
+// user.showName();
+
+// delete user.wife;
+
+// console.log(user);
+
+
+// const user = {
+//     name: "Volodymyr",
+//     age:200,
+// }
+
+// console.log(Object.keys(user));
+// console.log(Object.values(user));
+// Object.entries
+
+// Створення обєкту
+
+// new Object()
+
+// Використання класів
+
+// ООП - обєктно орієнтовне програмування
+
+// 
+
+// class User {
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age
+//     }
+
+//     showName(){
+//         console.log(this.name);
+//     }
+// }
+
+// const user1 = new User("Ivan", 3000);
+// const user2 = new User("Petro", 1000);
+
+// console.log(user1.showName());
+// console.log(user2.showName());
+// user2.showName();
+
+
+// class User {
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age
+//     }
+
+//     static PI = 3.14;
+
+//     // static showName(){
+//     //     console.log(this.name);
+//     // }
+
+//     // calculation(){
+//     //     console.log(2 + PI);
+//     // }
+// }
+
+
+
+
+// const user1 = new User("Ivan", 3000);
+
+// console.log(user1.PI);
+// console.log(User.PI);
+
+
+
+// Наслідування, Інкапсуляція, Поліморфізм
+
+
+// Наслідування
+
+
+class People {
+    constructor(name, age){
+        this._name = name;
+        this.age = age;
+    }
+
+    // value = 23; public data
+    #value = 23;
+    get name(){
+        return this._name;
+    }
+
+    set name(value){
+        if(typeof value === 'string'){
+            this._name = value;
+        }
+
+    }
+    set value(newValue){
+        this.#value = newValue;
+    }
+
+
+    talk(){
+        console.log("i can talk like People");
     }
 }
 
+class Student extends People {
+    constructor(name, course){
+        super(name);
+        this.course = course;
+    }
+
+    talk(){
+        super.talk();
+        console.log("i can talk like Student");
+    }
 
 
-
-
-
-function fun(){
-    let number = prompt("Enter a number");
-    if(number > 40){
-        throw new NumberError("Number is > 40");
+    lerning(){
+        console.log("lerning");
     }
 }
 
-try{
-    fun();
-
-}catch(error){
-    console.log(error.name);
-}finally{
-    console.log("thats all")
-}
+const student1 = new Student("Vasyl","js");
+console.log(student1);
+// const people1 = new People("Ivan", 40);
+// people1.name = "Vasyl";
+// people1.name;
+// console.log(people1.value);
+// console.log(student1.lerning());
+// student1.talk();
+// student1.name = "Vasyl";
+// getter setter
