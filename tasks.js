@@ -1,112 +1,132 @@
-// task1
-
-const arr = [5, 3, 4, 5, 6, 7, 3];
-
-function compact(array) {
-  return Array.from(new Set(array));
+// task 1
+function sumSliceArray(arr, first, second) {
+  try {
+    if (typeof first !== "number" || typeof second !== "number") {
+      throw new TypeError("Wrong data type! Arguments should be only numbers.");
+    } else if (first > arr.length || second > arr.length) {
+      throw new RangeError(
+        "Numbers from arguments are bigger then array legth"
+      );
+    } else {
+      console.log(arr[first] + arr[second]);
+    }
+  } catch (error) {
+    console.log(error.stack);
+  }
 }
+
+sumSliceArray([1, 2, 3, 4, 5], "aq", 3);
+
 
 
 // task2
-
-function createArray(start, end) {
-    const arr = [];
-    for (let i = start; i <= end; i++) {
-      arr.push(i);
+try {
+  function checkAge() {
+    const userName = prompt("Please enter your name:");
+    const userAgeData = prompt("Please enter your age:");
+    const userAge = parseInt(userAgeData);
+    const userStatus = prompt(
+      "Please enter your status (admin, moderator or user):"
+    );
+    if (isNaN(userAge)) {
+      throw new TypeError(
+        "Invalid age. You entered not a number in age field!"
+      );
+    } else if (userName === "" || userAge === 0 || userStatus === "") {
+      throw new Error("The field is empty! Please enter necessary information");
+    } else if (
+      userStatus !== "admin" &&
+      userStatus !== "moderator" &&
+      userStatus !== "user"
+    ) {
+      throw new EvalError(
+        "Invalid status. Please enter valid status (admin, moderator or user)!"
+      );
+    } else if (userAge < 18 || userAge > 70) {
+      throw new RangeError("Sorry, your age is out of range");
+    } else {
+      alert("You can continue watching Netflix");
     }
-    return arr;
   }
-  
-  let arrNew = createArray(2, 9);
-  console.log(arrNew);
-
-
-//task3
-
-const resultArray = [];
-function createArray(a, b) {
-  for (let i = 1; i <= 5; i++) {
-    for (j = 0; j < i - 1 + 1; j++) {
-      resultArray.push(i);
-    }
-  }
-  return resultArray;
+  checkAge();
+} catch (error) {
+  alert(error.stack);
 }
 
+
+
+// task3
+function calcRectangleArea(width, height) {
+  try {
+    if (typeof width !== "number" || typeof height !== "number") {
+      throw new TypeError("Wrong data type! Arguments should be only numbers.");
+    } else {
+      console.log(width * height);
+    }
+  } catch (error) {
+    console.log(error.stack);
+  }
+}
+
+calcRectangleArea(2, "a");
 
 // task4
-
-function randArray(k) { 
-    const randomArray = [];
-    for (let i = 0; i < k; i++) { 
-      randomArray.push(Math.floor(Math.random() * 499) + 1);
-    } return randomArray;
+class MonthException extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "MonthException";
+    this.message = message;
   }
+}
+let months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+function showMonthName(month) {
+  try {
+    if (month > 12 || month < 1) {
+      throw new MonthException("Incorrect month number");
+    } else if (typeof month !== "number") {
+      throw new MonthException("Incorrect provided data type");
+    } else {
+      console.log(months[month - 1]);
+    }
+  } catch (error) {
+    console.log(error.stack);
+  }
+}
+
+showMonthName(3);
 
 // task5
-
-const arrBig = [
-    5,
-    "Limit",
-    12,
-    "a",
-    "3",
-    99,
-    2,
-    [2, 4, 3, "33", "a", "text"],
-    "strong",
-    "broun",
-  ];
-  
-  function newArrays(array) {
-    const srtArr = [];
-    const numArr = [];
-  
-    const numberArray = array.flat();
-  
-    for (let i = 0; i < numberArray.length; i++) {
-      const el = numberArray[i];
-      if (typeof el === "number") {
-        numArr.push(el);
-      } else if (typeof el === "string") {
-        srtArr.push(el);
-      }
-    }
-  
-    // console.log(srtArr);
-    // console.log(numArr);
-    // return [srtArr, numArr];
+function showUser(id) {
+  if (id < 0) {
+      throw new Error('ID must not be negative: ' + id);
   }
-
-//   task6
-let date = new Date();
-let currentHour = date.getHours();
-
-if (currentHour >= 23 || currentHour <= 5) {
-  alert("Good night!");
-}
-else if (currentHour > 5 && currentHour <= 11) {
-  alert("Good morning!");
-}
-else if (currentHour > 11 && currentHour <= 17) {
-  alert("Good day!");
-}
-else if (currentHour > 17 && currentHour < 23) {
-  alert("Good evening");
+  return { id }; 
 }
 
-
-switch (true) {
-  case (currentHour >= 23 || currentHour <= 5):
-    alert("Good night!");
-    break;
-  case (currentHour > 5 && currentHour <= 11):
-    alert("Good morning!");
-    break;
-  case (currentHour > 11 && currentHour <= 17):
-    alert("Good day!");
-    break;
-  case (currentHour > 17 && currentHour < 23):
-    alert("Good evening!");
-    break;
+function showUsers(ids) {
+  let result = [];
+  ids.forEach(function (id) {
+      try {
+          let person = showUser(id);
+          result.push(person);
+      } catch (exception) {
+          console.log(exception.message);
+      }
+  });
+  return result;
 }
+showUsers([7, -12, 44, 22]);

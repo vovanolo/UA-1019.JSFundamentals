@@ -571,53 +571,53 @@
 // Наслідування
 
 
-class People {
-    constructor(name, age){
-        this._name = name;
-        this.age = age;
-    }
+// class People {
+//     constructor(name, age){
+//         this._name = name;
+//         this.age = age;
+//     }
 
-    // value = 23; public data
-    #value = 23;
-    get name(){
-        return this._name;
-    }
+//     // value = 23; public data
+//     #value = 23;
+//     get name(){
+//         return this._name;
+//     }
 
-    set name(value){
-        if(typeof value === 'string'){
-            this._name = value;
-        }
+//     set name(value){
+//         if(typeof value === 'string'){
+//             this._name = value;
+//         }
 
-    }
-    set value(newValue){
-        this.#value = newValue;
-    }
-
-
-    talk(){
-        console.log("i can talk like People");
-    }
-}
-
-class Student extends People {
-    constructor(name, course){
-        super(name);
-        this.course = course;
-    }
-
-    talk(){
-        super.talk();
-        console.log("i can talk like Student");
-    }
+//     }
+//     set value(newValue){
+//         this.#value = newValue;
+//     }
 
 
-    lerning(){
-        console.log("lerning");
-    }
-}
+//     talk(){
+//         console.log("i can talk like People");
+//     }
+// }
 
-const student1 = new Student("Vasyl","js");
-console.log(student1);
+// class Student extends People {
+//     constructor(name, course){
+//         super(name);
+//         this.course = course;
+//     }
+
+//     talk(){
+//         super.talk();
+//         console.log("i can talk like Student");
+//     }
+
+
+//     lerning(){
+//         console.log("lerning");
+//     }
+// }
+
+// const student1 = new Student("Vasyl","js");
+// console.log(student1);
 // const people1 = new People("Ivan", 40);
 // people1.name = "Vasyl";
 // people1.name;
@@ -626,3 +626,83 @@ console.log(student1);
 // student1.talk();
 // student1.name = "Vasyl";
 // getter setter
+
+// let title = document.querySelector(".title");
+// let title = document.getElementsByTagName("h1");
+
+
+// console.log(title);
+
+// console.log(document.querySelector(".box").childNodes);
+
+// console.log(document.querySelector(".box").children[0]);
+// console.log(document.querySelector(".box").children[0]);
+// console.log(document.querySelector(".box").firstChild);
+
+
+// console.log(document.querySelector(".box").children[0].nextElementSibling);
+
+
+// let title = document.querySelector(".title");
+
+// console.log(title.innerHTML);
+
+// let box = document.querySelector(".box");
+// let rozmitka = "<h1>hello</h1>"
+
+// box.innerHTML = rozmitka;
+
+// console.log(box.innerHTML);
+// innerHTML, innerText, textContent
+
+// outerHtml
+
+// let box = document.querySelector(".box");
+
+// let name = "Volodymyr";
+
+// box.outerHTML = `
+//     <div>
+//         <h1>hello ${name}</h1>
+//     </div>
+
+// `;
+
+// console.log(box.outerHTML);
+
+// let box = document.querySelector(".box");
+
+// console.log(box.tagName);
+
+// console.log(box.className);
+// box.className = "newBox";
+// box.id = "box1";
+
+// clasList
+
+// box.classList.add("newBox");
+// box.classList.toggle("newBox", true);
+
+// let box = document.querySelector(".box");
+
+// box.setAttribute("src", "newBox");
+
+// let div = document.createElement("div");
+// div.innerHTML = "hello world";
+// div.className = "newBoxBox";
+
+// box.append(div);
+// box.prepend(div);
+// box.appendChild(div);
+
+
+// console.log(div);
+
+// let title = document.querySelector(".title");
+
+// title.classList.add("newStyle");
+
+// title.style.color = "green";
+// title.style.backgroundColor = "black";
+
+
