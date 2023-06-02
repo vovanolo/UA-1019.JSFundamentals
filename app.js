@@ -705,4 +705,84 @@
 // title.style.color = "green";
 // title.style.backgroundColor = "black";
 
+// const allWorkers = [];
 
+// class Worker {
+//     #fullName;
+//     #dayRate;
+//     #workingDays;
+    // #experience = 23;
+  
+//     constructor(fullName, dayRate, workingDays, experience) {
+//       this.#fullName = fullName;
+//       this.#dayRate = dayRate;
+//       this.#workingDays = workingDays;
+//       this.#experience = experience;
+//       allWorkers.push(this);
+//     }
+// }
+
+// const worker1 = new Worker();
+
+// allWorkers.push(worker1);
+
+// let newWindow = window.open("https://www.google.com", "Google", "width=800, height=400, top=200, left=150");
+
+// newWindow.close();
+
+// newWindow.moveTo(400,400)
+
+// newWindow.resizeTo()
+
+
+// function clickHandler(){
+//     console.log("it works from js");
+// }
+
+// const title = document.querySelector('.title');
+
+
+// title.onclick = function(){
+//     console.log("it works again");
+// }
+
+// title.addEventListener("click",function(){
+//     console.log("added event listener");
+// })
+
+// function clickHandler(){
+//     console.log("it works from js");
+// }
+
+// title.addEventListener("click", clickHandler());
+
+// title.addEventListener("click",function(event){
+//     // console.log(event.target);
+//     event.target.style.color = "green";
+// })
+
+// const btn = document.querySelector('.btn');
+// const inp = document.querySelector('.inp');
+
+// btn.addEventListener("click",function(){
+//     title.style.backgroundColor = "red";
+// });
+
+// btn.addEventListener("click", function(){
+//     console.log(inp.value);
+//     inp.value = "";
+// })
+
+// const loginForm = document.querySelector('.loginForm');
+// const name = document.querySelector("#name");
+// const password = document.querySelector("#password");
+
+
+// loginForm.addEventListener("submit", function(event){
+//     event.preventDefault();
+//     console.log(`Your login is ${loginForm.elements["login"]} and password is ${loginForm.elements["password"]}`);
+// })
+
+// setTimeout(function(){
+//     console.log("im here after 3 seconds");
+// }, 3000);
