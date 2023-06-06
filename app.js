@@ -786,3 +786,12 @@
 // setTimeout(function(){
 //     console.log("im here after 3 seconds");
 // }, 3000);
+// console.log("string 224.567".match(/\d+\.\d+/));
+// "sfsf".test(//)
+// function upperCase(str) {
+//     if (str.test(/^[A-Z]/)) {
+//       return "String starts with uppercase character";
+//     } else {
+//       return "String does not start with uppercase character";
+//     }
+//   }
