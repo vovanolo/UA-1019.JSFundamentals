@@ -795,3 +795,35 @@
 //       return "String does not start with uppercase character";
 //     }
 //   }
+// document.querySelector(".btn").addEventListener("click", function(event){
+//     console.log(event);
+// })
+
+// $(".btn")
+$(function(){
+
+    // $(".btn").on("click", function(){
+    //     console.log("click from jquery");
+    // })
+
+    // $(".btn").css("color", "green");
+    // let $btn = $(".btn");
+    // $btn.css("color", "green");
+
+//     $.ajax({
+//         url: "https://jsonplaceholder.typicode.com/users",
+//         dataType: "json",
+//         success: function(listOfUsers){
+//             // $.each(listOfUsers, function
+//             // console.log(listOfUsers);
+//             $.each(listOfUsers, function(index, user){
+//                 console.log(user.company.name);
+//             })
+//         },
+//         error: function(error){
+//             console.log(error);
+//         }
+//     })
+
+
+// })
