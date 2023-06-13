@@ -2,10 +2,9 @@
 // коментар
 
 // console.log("hello everyone!");
-// console.log("hello world!"); 
+// console.log("hello world!");
 
-
-// var let const 
+// var let const
 
 // let message = "hello world!";
 
@@ -69,14 +68,11 @@
 // alert("Welcome " + name);
 // alert(`Welcome ${name}`);
 
-
-
 // let a = 2;
 
 // a = a + 1;
 
 // a = ++a;
-
 
 // 2 ** 2;
 
@@ -95,7 +91,6 @@
 // let a = 10;
 
 // a*=10;
-
 
 // console.log(10 < 50);
 // console.log(10 != 11);
@@ -137,7 +132,6 @@
 
 // users[7] = "John";
 
-
 // console.log(users[5]);
 
 // console.log(users[1]);
@@ -167,11 +161,9 @@
 //         console.log("you are 18");
 //         break;
 //     case 20:
-//         console.log("you are 20");    
+//         console.log("you are 20");
 //         break;
 // }
-
-
 
 // loops
 
@@ -190,7 +182,6 @@
 // for(let i = 5; i >= 0; i--){
 //     console.log(i);
 // }
-
 
 // const users = ["Ivan", "Petro", "Vasya"];
 // // users[0];
@@ -212,13 +203,11 @@
 
 // const users = ["Ivan", "Petro", "Vasya"];
 
-
 // for(let index in users){
 //     console.log(index);
 // }
 
 // break, continue
-
 
 // const numbers = [1,2,3,4,5,6,7,8,8,8];
 
@@ -236,17 +225,16 @@
 //     if(numbers[i] % 2 !== 0){
 //         continue;
 //     }
-//     console.log(numbers[i]);  
+//     console.log(numbers[i]);
 // }
 
 // let repeatEight = 0;
 // for(let i = 0; i < numbers.length; i++){
 //     if(numbers[i] === 8){
 //         repeatEight++;
-//     } 
+//     }
 // }
 // console.log(repeatEight);
-
 
 // functions
 
@@ -256,7 +244,6 @@
 //     console.log("hello");
 // }
 
-
 // sayHello();
 
 // function adding(a,b){
@@ -265,20 +252,16 @@
 
 // adding(10, 20);
 
-
 // function adding(a,b){
-//    return a + b;     
+//    return a + b;
 // }
 
 // // adding(10,20);
 // console.log(adding(10,20));
 
-
 // function multiplication(a,b){
 //     return a * b;
 // }
-
-
 
 // function multiplication(){
 //     // console.log(arguments);
@@ -292,7 +275,6 @@
 
 // multiplication(1,2,3,4,5,6,7);
 
-
 // let x = 1;
 
 // function something(){
@@ -301,7 +283,6 @@
 // }
 // something();
 // console.log(x);
-
 
 // function declaration
 // sayHello();
@@ -329,8 +310,6 @@
 // console.log(newUsers);
 // sort(function(a,b) return b - a;)
 
-
-
 // filter
 
 // let numbers = [1,2,3,4,6,7,7,7,8,8,9,10,11];
@@ -357,9 +336,7 @@
 
 // console.log(sum);
 
-
 // Помилки
-
 
 // синтаксичні
 
@@ -377,14 +354,12 @@
 
 // console.log(2 + 1);
 
-
 // Лайфхак
 
 // let x  =  2 + 2;
 // console.log(x);
 // let z = x +1;
 // console.log(z);
-
 
 //  try catch
 
@@ -421,11 +396,6 @@
 //     }
 // }
 
-
-
-
-
-
 // function fun(){
 //     let number = prompt("Enter a number");
 //     if(number > 40){
@@ -442,15 +412,12 @@
 //     console.log("thats all")
 // }
 
-
 // Класи && Обєкти
 
-
-// 
+//
 // const user = {
 //     key: value
 // }
-
 
 // const user = {
 //     name: "Volodymyr",
@@ -461,7 +428,6 @@
 //         age:200,
 //     }
 // }
-
 
 // console.log(user);
 // console.log(user.friends[2]);
@@ -478,7 +444,6 @@
 // user.friends.push("Pavlo")
 
 // console.log(user.wife.name);
-
 
 // const user = {
 //     name: "Volodymyr",
@@ -499,7 +464,6 @@
 
 // console.log(user);
 
-
 // const user = {
 //     name: "Volodymyr",
 //     age:200,
@@ -517,7 +481,7 @@
 
 // ООП - обєктно орієнтовне програмування
 
-// 
+//
 
 // class User {
 //     constructor(name, age){
@@ -537,7 +501,6 @@
 // console.log(user2.showName());
 // user2.showName();
 
-
 // class User {
 //     constructor(name, age){
 //         this.name = name;
@@ -555,21 +518,14 @@
 //     // }
 // }
 
-
-
-
 // const user1 = new User("Ivan", 3000);
 
 // console.log(user1.PI);
 // console.log(User.PI);
 
-
-
 // Наслідування, Інкапсуляція, Поліморфізм
 
-
 // Наслідування
-
 
 // class People {
 //     constructor(name, age){
@@ -593,7 +549,6 @@
 //         this.#value = newValue;
 //     }
 
-
 //     talk(){
 //         console.log("i can talk like People");
 //     }
@@ -609,7 +564,6 @@
 //         super.talk();
 //         console.log("i can talk like Student");
 //     }
-
 
 //     lerning(){
 //         console.log("lerning");
@@ -630,7 +584,6 @@
 // let title = document.querySelector(".title");
 // let title = document.getElementsByTagName("h1");
 
-
 // console.log(title);
 
 // console.log(document.querySelector(".box").childNodes);
@@ -639,9 +592,7 @@
 // console.log(document.querySelector(".box").children[0]);
 // console.log(document.querySelector(".box").firstChild);
 
-
 // console.log(document.querySelector(".box").children[0].nextElementSibling);
-
 
 // let title = document.querySelector(".title");
 
@@ -695,7 +646,6 @@
 // box.prepend(div);
 // box.appendChild(div);
 
-
 // console.log(div);
 
 // let title = document.querySelector(".title");
@@ -711,8 +661,8 @@
 //     #fullName;
 //     #dayRate;
 //     #workingDays;
-    // #experience = 23;
-  
+// #experience = 23;
+
 //     constructor(fullName, dayRate, workingDays, experience) {
 //       this.#fullName = fullName;
 //       this.#dayRate = dayRate;
@@ -734,13 +684,11 @@
 
 // newWindow.resizeTo()
 
-
 // function clickHandler(){
 //     console.log("it works from js");
 // }
 
 // const title = document.querySelector('.title');
-
 
 // title.onclick = function(){
 //     console.log("it works again");
@@ -777,7 +725,6 @@
 // const name = document.querySelector("#name");
 // const password = document.querySelector("#password");
 
-
 // loginForm.addEventListener("submit", function(event){
 //     event.preventDefault();
 //     console.log(`Your login is ${loginForm.elements["login"]} and password is ${loginForm.elements["password"]}`);
@@ -800,15 +747,15 @@
 // })
 
 // $(".btn")
-$(function(){
+// $(function(){
 
-    // $(".btn").on("click", function(){
-    //     console.log("click from jquery");
-    // })
+// $(".btn").on("click", function(){
+//     console.log("click from jquery");
+// })
 
-    // $(".btn").css("color", "green");
-    // let $btn = $(".btn");
-    // $btn.css("color", "green");
+// $(".btn").css("color", "green");
+// let $btn = $(".btn");
+// $btn.css("color", "green");
 
 //     $.ajax({
 //         url: "https://jsonplaceholder.typicode.com/users",
@@ -825,5 +772,63 @@ $(function(){
 //         }
 //     })
 
-
 // })
+
+// const fun = function(){
+//     console.log("Welcome");
+// }
+
+// fun();
+
+// const fun = () => {
+//     console.log("welcome");
+// }
+
+// const fun = function(a,b){
+//     return a + b;
+// }
+
+// const fun = (a,b) => a + b;
+
+// const fun = (a,b) => (a > 0) ? a+b : "bad idea";
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// const newNumber = numbers.map(function(element){
+//     return element + 1;
+// })
+// const newNumber = numbers.map(element => element + 1);
+
+// const newNumber = numbers
+//   .sort()
+//   .filter((element) => element > 5)
+//   .map((element) => element + 1);
+
+// numbers.map(element => {
+//     console.log(element);
+// })
+
+
+// const user = {
+//     name: 'John',
+//     surname: 'Johnenko',
+//     age: 34,
+
+// }
+
+// function getUserName({name}){
+//     console.log(name);
+// }
+
+// getUserName(user)
+
+// const myCollection = new Map();
+
+// myCollection.set("name", "Ivan");
+// myCollection.set("city", "Lviv");
+
+// myCollection.set("name", "Ivan");
+
+
+// console.log(myCollection);
+
