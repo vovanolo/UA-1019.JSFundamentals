@@ -832,3 +832,100 @@
 
 // console.log(myCollection);
 
+// console.log("1");
+
+// setTimeout(() => {
+//     console.log("2");
+// })
+
+// console.log("3");
+
+// function sayHello(){
+//     return "hello";
+// }
+
+// console.log(sayHello());
+
+// function sayHello(){
+//     return new Promise((resolve, reject) => {
+//         resolve("hello");
+//     })
+// }
+
+// // console.log(sayHello());
+// sayHello().then((result) => {
+//     console.log(result);
+// })
+
+// function sum(a,b){
+//     return new Promise((resolve, reject) => {
+//         if(a > 0 && b > 0){
+//             resolve(a + b);
+//         }else{
+//             reject("something went wrong");
+//         }
+//     })
+// }
+
+// sum(-2,-2).then((result) => {
+//     console.log(result);
+// }).catch((error) => {
+//     console.log(error);
+// })
+
+// sum(-2,-2).then((result) => {
+//     console.log(result);
+// }, (error) => {
+//     console.log(error);
+// });
+
+
+
+// function sum(a,b){
+//     return new Promise((resolve, reject) => {
+//         if(a > 0 && b > 0){
+//             resolve(a + b);
+//         }else{
+//             reject("something went wrong");
+//         }
+//     })
+// }
+
+// sum(2,2).then((result) => {
+//     console.log(result);
+//     // return result + 4;
+// }).then((result) => {
+//     console.log(result);
+//     return result + 256;
+// }).then((result) => {
+//     console.log(result);
+// })
+
+// async function sayHello(){
+//     // console.log("hello");
+//     return "hello";
+// }
+
+// console.log(sayHello());
+// let result = sayHello();
+
+// console.log(result);
+
+// sayHello().then((result) => {console.log(result);})
+
+function sum(a,b){
+    return new Promise((resolve,reject) =>{
+        if(a > 0 && b > 0){
+            resolve(a + b);
+        }else{
+            reject("something went wrong");
+        }
+    }
+)};
+
+sum(-1,-2).then((result) => {console.log(result)})
+        .catch((err) => {
+            console.log(err);
+            return sum(2,2);
+        })
+        .then((result) => {console.log(result)});
