@@ -913,19 +913,79 @@
 
 // sayHello().then((result) => {console.log(result);})
 
-function sum(a,b){
-    return new Promise((resolve,reject) =>{
-        if(a > 0 && b > 0){
-            resolve(a + b);
-        }else{
-            reject("something went wrong");
-        }
-    }
-)};
+// function sum(a,b){
+//     return new Promise((resolve,reject) =>{
+//         if(a > 0 && b > 0){
+//             resolve(a + b);
+//         }else{
+//             reject("something went wrong");
+//         }
+//     }
+// )};
 
-sum(-1,-2).then((result) => {console.log(result)})
-        .catch((err) => {
-            console.log(err);
-            return sum(2,2);
-        })
-        .then((result) => {console.log(result)});
+// sum(-1,-2).then((result) => {console.log(result)})
+//         .catch((err) => {
+//             console.log(err);
+//             return sum(2,2);
+//         })
+//         .then((result) => {console.log(result)});
+
+// setItem, getItem, removeItem, clear
+
+// localStorage.setItem("name", "Volodymyr");
+
+// console.log(localStorage.getItem("name"));
+
+// localStorage.removeItem("name");
+
+// localStorage.clear();
+
+// const users = [
+//     {
+//         name: "Volodymyr1",
+//         age:28
+//     },
+//     {
+//         name: "Volodymyr2",
+//         age:30
+//     },
+//     {
+//         name: "Volodymyr3",
+//         age:32
+//     },{
+//         name: "Volodymyr4",
+//         age:34
+//     }
+// ];
+
+// localStorage.setItem("users", JSON.stringify(users));
+
+
+// console.log(JSON.parse(localStorage.getItem('users')));
+
+// console.log("hello people");
+
+// alert("hello");
+
+// const fs = require("fs");
+
+// fs.readFile('./text.txt', 'utf8', function(err,data){
+//     console.log(data);
+// })
+
+const http = require("http");
+
+http.createServer(function(request,response){
+    // response.writeHead(200,{"Content-Type": "text/plain"});
+    response.writeHead(200,{"Content-Type": "text/html"});
+
+    response.write(`<h1>hello world</h1>
+                    <h2>Hello world!!!</h2>    
+    `);
+    response.end();
+
+}).listen(8000);
+
+console.log("server is runnning on port 8000");
+
+
