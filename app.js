@@ -973,19 +973,66 @@
 //     console.log(data);
 // })
 
-const http = require("http");
+// const http = require("http");
 
-http.createServer(function(request,response){
-    // response.writeHead(200,{"Content-Type": "text/plain"});
-    response.writeHead(200,{"Content-Type": "text/html"});
+// http.createServer(function(request,response){
+//     // response.writeHead(200,{"Content-Type": "text/plain"});
+//     response.writeHead(200,{"Content-Type": "text/html"});
 
-    response.write(`<h1>hello world</h1>
-                    <h2>Hello world!!!</h2>    
-    `);
-    response.end();
+//     response.write(`<h1>hello world</h1>
+//                     <h2>Hello world!!!</h2>    
+//     `);
+//     response.end();
 
-}).listen(8000);
+// }).listen(8000);
 
-console.log("server is runnning on port 8000");
+// console.log("server is runnning on port 8000");
+
+
+// fetch("https://jsonplaceholder.typicode.com/users")
+//     .then((response) => response.json())
+//     .then((data) => console.log(data))
+// let usersList = document.querySelector(".users-list");
+
+// let response = await fetch("https://jsonplaceholder.typicode.com/users");
+// let data = await response.json();
+
+// data.map((user) => {
+//     usersList.innerHTML += `<li data="1">${user.name}</li>`;
+// });
+
+
+// let response = await fetch("./users.json");
+// let data = await response.json();
+
+// console.log(data);
+
+// let newUser = {
+//     id: 4,
+//     name: "Ivan4",
+//     age: 44
+// }
+
+// function(){
+//     let inp.value;
+//     let inp2.value;
+
+//     let newUser = {
+//         id: "2",
+//         name: inp.value,
+//         age: inp2.value
+//     }
+// }
+
+// fetch("./users.json", {
+//     method: "POST",
+//     body: JSON.stringify(newUser),
+//     // headers: {
+//     //     "Content-Type": "application/json, charset=utf-8"
+//     // }
+// })
+
+
+
 
 
